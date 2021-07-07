@@ -1,7 +1,7 @@
 /* @import url('../../keycloak/lib/zocial/zocial.css');*/
 
 body {
-    background-color: rgb(63,81,181);
+    background-color: white;
     /*background-image: url('../img/bkgrnd.jpg');*/
     background-position: center center;
     background-attachment: fixed;
@@ -21,10 +21,15 @@ a {
 /* Change content to change the title of the page*/
 div#kc-header::after {
     padding-top: 3px;
-    content: 'FeedHenry Work Force Management';
     font-size: 40px;
     line-height: 50px;
     margin-bottom: 15px;
+}
+
+#kc-page-title{
+    color: black;
+    text-shadow: none;
+    padding-left: 9.5rem;
 }
 
 div#kc-info {
@@ -32,30 +37,52 @@ div#kc-info {
 
 /*title banner size and colour*/
 div#kc-header {
-    width:100%;
-    background-color: rgb(40,53,147);
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
+    background-color: white(40,53,147);
+    background-image: url('./logo-hausenn-black.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 22em;
+    padding-bottom: 10em;
     padding-right: 2em;
     padding-left: 3em;
 }
 
 div#kc-content {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 95%;
-    margin-left: -44%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 div#kc-form {
 
 }
 /* label change Username, Password text*/
-div#kc-form label {
-    color: rgba(255, 255, 255, 0.7) !important;
+div#kc-form label[for="username"],div#kc-form label[for="password"] {
+    color: transparent;
+    text-shadow: none;
     display: block;
     font-size: 30px;
+}
+
+div#kc-form .checkbox input[type='checkbox'] {
+           width: 35px;
+            height: 35px;
+            background-color: white;
+}
+
+div#kc-form .checkbox input[type='checkbox']:checked {
+        background-color: white !important;
+        color: black;
+}
+
+
+div#kc-form .checkbox label{
+    color: black;
+    text-shadow: none;
+    display: block;
+    font-size: 30px !important;
+    font-weight: bold;
+    margin: 1.5em 0 1.5em 0;
 }
 /**/
 div#kc-form-login {
@@ -80,35 +107,40 @@ div#info-area p {
 }
 /*fields*/
 input[type=text], input[type=password] {
-    color: #ddd;
     font-size: 30px;
-    margin-bottom: 20px;
-    background: none;
-    border-width: 0 0 1px 0;
-    padding: 12px;
-    width: 95%;
+    border-radius: 10px;
+    color: black !important;
+    margin: 0px auto 2.5px auto; 
+    background-color: white;
+    width: 68%;
+    height: 5rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    box-shadow: none;
 }
 
 input[type=text]:hover, input[type=password]:hover {
-    background-color: rgba(3,70,114,0.4);
+
 }
 /*button*/
 input[type=submit] {
-    border: none;
-    border-radius: 3px;
-    background-color: rgb(40,53,147);
-    box-shadow: 0px 0px 6px rgba(0,0,0,0.5);
-    color: rgba(0,0,0,0.6);
+    background-color: black;
     font-size: 30px;
-    color: white;
-    text-transform: uppercase;
-    padding: 20px;
-    margin-top: 3em;
-    width: 98%;
+    border-radius: 10px;
+    color: white !important;
+    margin: 0px auto 2.5px auto; 
+    width: 69%;
+    height: 6rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
 }
 
 input[type=submit]:hover {
-    background-color: rgba(255,255,255,0.8);
 }
 
 div#kc-form-options div {
@@ -151,10 +183,20 @@ div#kc-header-wrapper {
 }
 
 div#kc-registration {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #aaa7a7 !important;
+    text-shadow: none;
     font-size: 1.8em;
     margin-bottom: 20px;
     margin-top: 2em;
+}
+
+div#kc-registration span a {
+    color: black;
+    text-shadow: none;
+    font-size: 30px !important;
+    font-weight: bold;
+    margin: 1.5em 0 1.5em 0;
+    text-decoration: none;
 }
 
 div#social-login {
