@@ -1,4 +1,27 @@
-/* @import url('../../keycloak/lib/zocial/zocial.css');*/
+@font-face {
+    font-family: "Bauer Bodoni";
+    src: url("./fonts/bauer_bodoni/bauer-bodoni-std-roman.otf");
+  }
+  
+  @font-face {
+    font-family: "Bauer Bodoni";
+    src: url("./fonts/bauer_bodoni/bauer-bodoni-black.ttf");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Raleway";
+    src: url("./fonts/raleway/raleway.ttf");
+    font-weight: 100 900;
+  }
+  
+  @font-face {
+    font-family: "Raleway";
+    src: url("./fonts/raleway/raleway-italic.ttf");
+    font-weight: 100 900;
+    font-style: italic;
+  }
+
 
 body {
     background-color: white;
@@ -9,13 +32,91 @@ body {
     background-repeat: no-repeat;
 
     color: #fff;
-    font-family: sans-serif;
+    font-family: 'Baur Bodoni', sans-serif;
     text-shadow: 0px 0px 10px #000;
     margin: 0px;
 }
 
 a {
     color: #fff;
+}
+
+#kc-locale {
+    text-shadow: none;
+    position: absolute;
+    width: 200px;
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    z-index: 9999;
+}
+
+#kc-locale ul {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    list-style: none;
+    right: 0;
+    top: 20px;
+    min-width: 100px;
+    padding: 2px 0;
+    border: solid 1px #bbb;
+}
+
+#kc-locale:hover ul {
+    display: block;
+    margin: 0;
+}
+
+#kc-locale ul li a {
+    display: block;
+    padding: 5px 14px;
+    color: #000 !important;
+    text-decoration: none;
+    line-height: 20px;
+}
+
+#kc-locale ul li a:hover {
+    color: #4d5258;
+    background-color: #d4edfa;
+}
+
+#kc-locale-dropdown a {
+    color: #4d5258;
+    background: 0 0;
+    padding: 0 15px 0 0;
+    font-weight: 300;
+}
+
+#kc-locale-dropdown a:hover {
+    text-decoration: none;
+}
+
+a#kc-current-locale-link {
+    display: block;
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+/* a#kc-current-locale-link:hover {
+    background-color: rgba(0,0,0,0.2);
+} */
+
+a#kc-current-locale-link::after {
+    content: "\2c5";
+    margin-left: 4px;
+}
+
+.login-pf .container {
+    padding-top: 40px;
+}
+
+.login-pf a:hover {
+    color: #0099d3;
+}
+
+#kc-logo {
+    width: 100%;
 }
 
 /* Change content to change the title of the page*/
@@ -27,9 +128,10 @@ div#kc-header::after {
 }
 
 #kc-page-title{
+    display: none;
     color: black;
     text-shadow: none;
-    padding-left: 9.5rem;
+    margin-left: 9.5rem;
 }
 
 div#kc-info {
@@ -53,15 +155,49 @@ div#kc-content {
     justify-content: center;
 }
 
-div#kc-form {
-
-}
-/* label change Username, Password text*/
-div#kc-form label[for="username"],div#kc-form label[for="password"] {
-    color: transparent;
+div#form-group .control-label{
+    color: #aaa7a7;
+    text-align: start;
     text-shadow: none;
     display: block;
     font-size: 30px;
+    margin-left: 9.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+div#form-group .form-control{
+    font-size: 30px;
+    border-radius: 10px;
+    color: black !important;
+    margin: 0px auto 2.5px auto; 
+    background-color: white;
+    width: 68%;
+    height: 5rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+}
+
+/* label change Username, Password text*/
+div#kc-form label[for="username"],div#kc-form label[for="password"] {
+    color: #aaa7a7;
+    text-align: start;
+    text-shadow: none;
+    display: block;
+    font-size: 30px;
+    margin-left: 9.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+div#kc-form .checkbox {
+    display: flex;
+    float: left;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: 7.5rem;
+    justify-content: space-between;
 }
 
 div#kc-form .checkbox input[type='checkbox'] {
@@ -70,9 +206,18 @@ div#kc-form .checkbox input[type='checkbox'] {
             background-color: white;
 }
 
-div#kc-form .checkbox input[type='checkbox']:checked {
-        background-color: white !important;
-        color: black;
+
+
+div#kc-form span a[tabindex="5"] {
+    color: #aaa7a7 !important;
+    text-decoration: none;
+    font-size: 30px !important;
+    text-shadow: none;
+    float: right;
+    justify-content: space-between;
+    margin-top: 6.7rem;
+    margin-right: 7.5rem;
+    margin-bottom: 6rem;
 }
 
 
@@ -82,7 +227,6 @@ div#kc-form .checkbox label{
     display: block;
     font-size: 30px !important;
     font-weight: bold;
-    margin: 1.5em 0 1.5em 0;
 }
 /**/
 div#kc-form-login {
@@ -119,20 +263,14 @@ input[type=text], input[type=password] {
     border-color: black;
 }
 
-input[type=text]:focus, input[type=password]:focus {
-    box-shadow: none;
-}
-
-input[type=text]:hover, input[type=password]:hover {
-
-}
 /*button*/
 input[type=submit] {
+    text-align: center;
     background-color: black;
     font-size: 30px;
-    border-radius: 10px;
+    border-radius: 18px;
     color: white !important;
-    margin: 0px auto 2.5px auto; 
+    margin-bottom: 2.5px; 
     width: 69%;
     height: 6rem;
     font-weight: bold;
@@ -187,7 +325,7 @@ div#kc-registration {
     text-shadow: none;
     font-size: 1.8em;
     margin-bottom: 20px;
-    margin-top: 2em;
+    margin-top: 6rem;
 }
 
 div#kc-registration span a {
@@ -200,10 +338,7 @@ div#kc-registration span a {
 }
 
 div#social-login {
-    border-left: 1px solid rgba(255, 255, 255, 0.2);
-    float: right;
-    width: 150px;
-    padding: 20px 0 200px 40px;
+
 }
 
 div.social-login span {
@@ -217,16 +352,52 @@ div#kc-social-providers ul {
 }
 
 div#kc-social-providers ul li {
-    margin-bottom: 20px;
+    background-color: white;
+    font-size: 30px;
+    border-radius: 18px;
+    margin: 28px auto 28px auto; 
+    width: 69%;
+    height: 5.5rem;
+    font-weight: bold;
+    border-style: solid;
+    border-color: black;
+}
+
+div#kc-social-providers ul li a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: black;
+    background-color: transparent !important;
+    text-decoration: none;
+    text-shadow: none;
+    
 }
 
 div#kc-social-providers ul li span {
-    display: inline;
-    width: 100px;
+    margin: 3px 0;
+    display: inline-block;
+    margin: 25px auto;
+}
+
+.zocial.google:before {
+    display: flex;
+    float: left;
+    margin: 25px auto;
+    padding: 0 0.5em;
+    content: "\f126";
+}
+
+.zocial.facebook:before {
+    content: "\f126";
+    display: flex;
+    float: left;
+    margin: 25px auto;
+    padding: 0 0.5em;
 }
 
 a.zocial {
-    border: none;
+    /* border: none;
     background: -webkit-linear-gradient(top, rgba(255,255,255,0.8), rgba(255,255,255,0.1)) !important;
     background: -moz-linear-gradient(top, rgba(255,255,255,0.8), rgba(255,255,255,0.1)) !important;
     background: -ms-linear-gradient(top, rgba(255,255,255,0.8), rgba(255,255,255,0.1)) !important;
@@ -239,5 +410,5 @@ a.zocial {
     -moz-border-radius: 0;
     border-radius: 0;
     padding-top: 0.2em;
-    padding-bottom: 0.2em;
+    padding-bottom: 0.2em; */
 }
