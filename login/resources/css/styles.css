@@ -1,3 +1,4 @@
+/* @import url('../../keycloak/lib/zocial/zocial.css');*/
 @font-face {
     font-family: "Bauer Bodoni";
     src: url("./fonts/bauer_bodoni/bauer-bodoni-std-roman.otf");
@@ -31,9 +32,10 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    color: #fff;
+    color: black;
+    text-decoration: none;
+    text-shadow: none;
     font-family: 'Baur Bodoni', sans-serif;
-    text-shadow: 0px 0px 10px #000;
     margin: 0px;
 }
 
@@ -155,7 +157,7 @@ div#kc-content {
     justify-content: center;
 }
 
-div#form-group .control-label{
+form#kc-register-form label[for="firstName"], form#kc-register-form label[for="lastName"], form#kc-register-form label[for="email"], form#kc-register-form label[for="password"], form#kc-register-form label[for="password-confirm"]{
     color: #aaa7a7;
     text-align: start;
     text-shadow: none;
@@ -166,17 +168,15 @@ div#form-group .control-label{
     margin-bottom: 0.5rem;
 }
 
-div#form-group .form-control{
+form#kc-register-form div#kc-form-options span a{
+    color: #aaa7a7;
+    text-align: start;
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
     font-size: 30px;
-    border-radius: 10px;
-    color: black !important;
-    margin: 0px auto 2.5px auto; 
-    background-color: white;
-    width: 68%;
-    height: 5rem;
-    font-weight: bold;
-    border-style: solid;
-    border-color: black;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 /* label change Username, Password text*/
@@ -201,9 +201,13 @@ div#kc-form .checkbox {
 }
 
 div#kc-form .checkbox input[type='checkbox'] {
-           width: 35px;
-            height: 35px;
-            background-color: white;
+    width: 35px;
+    height: 35px;
+    background-color: black;
+}
+
+div#kc-form .checkbox input[type='checkbox']:checked {
+    
 }
 
 
@@ -270,7 +274,7 @@ input[type=submit] {
     font-size: 30px;
     border-radius: 18px;
     color: white !important;
-    margin-bottom: 2.5px; 
+    margin-bottom: 2.5px auto; 
     width: 69%;
     height: 6rem;
     font-weight: bold;
@@ -375,17 +379,18 @@ div#kc-social-providers ul li a {
 }
 
 div#kc-social-providers ul li span {
-    margin: 3px 0;
     display: inline-block;
-    margin: 25px auto;
+    margin: 25px auto 25px -57px;
+    text-align: center;
 }
 
 .zocial.google:before {
     display: flex;
     float: left;
     margin: 25px auto;
-    padding: 0 0.5em;
-    content: "\f126";
+    padding: 0 5em;
+    font-size: 3px;
+    content: url(./google.png);
 }
 
 .zocial.facebook:before {
@@ -394,6 +399,7 @@ div#kc-social-providers ul li span {
     float: left;
     margin: 25px auto;
     padding: 0 0.5em;
+    content: url(./facebook.png);
 }
 
 a.zocial {
