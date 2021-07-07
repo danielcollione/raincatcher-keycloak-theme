@@ -157,8 +157,19 @@ div#kc-content {
     justify-content: center;
 }
 
+form#kc-reset-password-form label[for="username"] {
+    color: #7b7b7b;
+    text-align: start;
+    text-shadow: none;
+    display: block;
+    font-size: 30px;
+    margin-left: 9.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
 form#kc-register-form label[for="firstName"], form#kc-register-form label[for="lastName"], form#kc-register-form label[for="email"], form#kc-register-form label[for="password"], form#kc-register-form label[for="password-confirm"]{
-    color: #aaa7a7;
+    color: #7b7b7b;
     text-align: start;
     text-shadow: none;
     display: block;
@@ -169,7 +180,7 @@ form#kc-register-form label[for="firstName"], form#kc-register-form label[for="l
 }
 
 form#kc-register-form div#kc-form-options span a{
-    color: #aaa7a7;
+    color: #7b7b7b;
     text-align: start;
     display: block;
     text-decoration: none;
@@ -179,9 +190,27 @@ form#kc-register-form div#kc-form-options span a{
     margin-bottom: 3rem;
 }
 
+form#kc-reset-password-form div#kc-form-options span a {
+    color: #7b7b7b;
+    text-align: start;
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 30px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+div#kc-info-wrapper {
+    padding: 10%;
+    margin-top: 0.5rem;
+    color: #7b7b7b;
+    font-size: 25px;
+}
+
 /* label change Username, Password text*/
 div#kc-form label[for="username"],div#kc-form label[for="password"] {
-    color: #aaa7a7;
+    color: #7b7b7b;
     text-align: start;
     text-shadow: none;
     display: block;
@@ -213,7 +242,7 @@ div#kc-form .checkbox input[type='checkbox']:checked {
 
 
 div#kc-form span a[tabindex="5"] {
-    color: #aaa7a7 !important;
+    color: #7b7b7b !important;
     text-decoration: none;
     font-size: 30px !important;
     text-shadow: none;
@@ -325,7 +354,7 @@ div#kc-header-wrapper {
 }
 
 div#kc-registration {
-    color: #aaa7a7 !important;
+    color: #7b7b7b !important;
     text-shadow: none;
     font-size: 1.8em;
     margin-bottom: 20px;
