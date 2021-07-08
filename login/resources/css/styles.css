@@ -190,24 +190,6 @@ form#kc-register-form div#kc-form-options span a{
     margin-bottom: 3rem;
 }
 
-form#kc-reset-password-form div#kc-form-options span a {
-    color: #7b7b7b;
-    text-align: start;
-    display: block;
-    text-decoration: none;
-    text-shadow: none;
-    font-size: 30px;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-
-div#kc-info-wrapper {
-    padding: 10%;
-    margin-top: 0.5rem;
-    color: #7b7b7b;
-    font-size: 25px;
-}
-
 /* label change Username, Password text*/
 div#kc-form label[for="username"],div#kc-form label[for="password"] {
     color: #7b7b7b;
@@ -308,9 +290,6 @@ input[type=submit] {
     font-weight: bold;
     border-style: solid;
     border-color: black;
-}
-
-input[type=submit]:hover {
 }
 
 div#kc-form-options div {
@@ -443,4 +422,53 @@ a.zocial {
     border-radius: 0;
     padding-top: 0.2em;
     padding-bottom: 0.2em; */
+}
+
+/*Confirm Email Screnn*/
+
+.alert-warning .kc-feedback-text {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 5%;
+}
+
+.instruction {
+    color: #7b7b7b;
+    padding: 10px 5%;
+    margin-top: 5rem;
+    font-size: 16px;
+}
+
+.instruction a{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/*Reset Password Screen */
+
+form#kc-reset-password-form div#kc-form-options span a {
+    color: #7b7b7b;
+    text-align: start;
+    display: block;
+    text-decoration: none;
+    text-shadow: none;
+    font-size: 30px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+div#kc-info-wrapper {
+    padding: 10%;
+    margin-top: 0.5rem;
+    color: #7b7b7b;
+    font-size: 25px;
+}
+
+/*Alert Error*/
+
+.alert-error .kc-feedback-text {
+    font-size: 25px;
+    color: red;
+    padding: 0 30px;
 }
