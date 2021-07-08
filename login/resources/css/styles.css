@@ -232,11 +232,6 @@ div#kc-form .checkbox {
 div#kc-form .checkbox input[type='checkbox'] {
     width: 35px;
     height: 35px;
-    background-color: black;
-}
-
-div#kc-form .checkbox input[type='checkbox']:checked {
-    
 }
 
 
@@ -294,6 +289,10 @@ input[type=text], input[type=password] {
     font-weight: bold;
     border-style: solid;
     border-color: black;
+}
+
+input[type=text]:focus, input[type=password] {
+    outline: none;
 }
 
 /*button*/
