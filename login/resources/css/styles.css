@@ -426,12 +426,6 @@ a.zocial {
 
 /*Confirm Email Screnn*/
 
-.alert-warning .kc-feedback-text {
-    font-size: 17px;
-    font-weight: bold;
-    padding: 5%;
-}
-
 .instruction {
     color: #7b7b7b;
     padding: 10px 5%;
@@ -475,4 +469,10 @@ div#kc-info-wrapper {
 .alert-success .kc-feedback-text {
     font-size: 25px;
     color: green;
+}
+
+.alert-warning .kc-feedback-text {
+    font-size: 25px;
+    font-weight: bold;
+    padding: 5%;
 }
