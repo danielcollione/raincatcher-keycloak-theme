@@ -436,7 +436,7 @@ a.zocial {
     color: #7b7b7b;
     padding: 10px 5%;
     margin-top: 5rem;
-    font-size: 16px;
+    font-size: 25px;
 }
 
 .instruction a{
@@ -470,5 +470,9 @@ div#kc-info-wrapper {
 .alert-error .kc-feedback-text {
     font-size: 25px;
     color: red;
-    padding: 0 30px;
+}
+
+.alert-success .kc-feedback-text {
+    font-size: 25px;
+    color: green;
 }
